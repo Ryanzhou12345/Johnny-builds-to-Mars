@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f5ee">
+  <meta name="description" content="Read Johnny Builds to Mars, an illustrated story with six little games. Build a rocket, explore Mars, and help Johnny get home for a snack.">
+  <title>Johnny Builds to Mars — Little Wonders</title>
+  <link rel="icon" href="assets/johnny-mars.jpg" type="image/jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=DM+Serif+Display:ital@0;1&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body class="single-book">
+  <header class="book-header">
+    <button class="brand" data-cover aria-label="Johnny Builds to Mars cover"><span class="brand-mark" aria-hidden="true"><span class="icon">auto_stories</span><i></i></span><span>little wonders<span class="brand-dot">.</span></span></button>
+    <nav aria-label="Book information"><button data-info="how">How to play</button><button data-info="grownups">For grown-ups</button></nav>
+  </header>
+
+  <main class="book-main">
+    <section id="reader" class="reader standalone-reader" aria-labelledby="reader-title">
+      <div class="reader-top">
+        <button id="cover-button" class="text-button" aria-label="Back to the cover"><span class="icon" aria-hidden="true">menu_book</span> The cover</button>
+        <span id="reader-title">Johnny builds to Mars</span>
+        <div class="reader-tools">
+          <button id="read-aloud" class="icon-button" aria-label="Read this page aloud" title="Read this page aloud"><span class="icon" aria-hidden="true">record_voice_over</span></button>
+          <button class="icon-button" data-sound aria-pressed="false" aria-label="Turn sound on"><span class="icon" aria-hidden="true">volume_off</span></button>
+        </div>
+      </div>
+      <div id="book-content" class="book-content"><noscript><p class="empty-message">Please enable JavaScript to read the story and play its games.</p></noscript></div>
+      <div class="reader-bottom">
+        <button id="previous-page" class="text-button"><span class="icon" aria-hidden="true">arrow_back</span> Back</button>
+        <div id="page-dots" class="page-dots" role="group" aria-label="Story pages"></div>
+        <button id="next-page" class="primary-button">Turn the page <span class="icon" aria-hidden="true">arrow_forward</span></button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="book-footer"><p>Johnny and Pip’s make-believe trip to Mars.</p></footer>
+
+  <dialog id="info-dialog" class="info-dialog" aria-labelledby="info-title">
+    <button id="close-info" class="icon-button dialog-close" aria-label="Close"><span class="icon" aria-hidden="true">close</span></button>
+    <span id="info-icon" class="icon info-icon" aria-hidden="true">auto_stories</span>
+    <h2 id="info-title"></h2>
+    <div id="info-content"></div>
+    <button id="info-done" class="primary-button">Got it <span class="icon" aria-hidden="true">check</span></button>
+  </dialog>
+  <div id="toast" role="status" class="toast"></div>
+</body>
+</html>
